@@ -58,29 +58,3 @@ python app.py
 Gradio will provide a local URL and an optional public share link.
 
 ---
-
-## 📘 Example Code Snippet
-
-```python
-MODEL_ID = "Qwen/Qwen3-4B-Instruct-2507"
-
-tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
-model = AutoModelForCausalLM.from_pretrained(
-    MODEL_ID,
-    device_map="auto",
-    torch_dtype=torch.float16,
-    load_in_4bit=True
-)
-
-chatbot = pipeline("text-generation", model=model, tokenizer=tokenizer)
-```
-
----
-
-
-
-
-
-
-
-إذا أردت نسخة أطول، أو أكثر تقنية، أو بإضافة صور/Flowcharts — فقط أخبرني.
